@@ -1,10 +1,26 @@
-### Mod key ###
+### General stuff ###
+
+# Set Mod key
 set $mod Mod4
 
-
-
-### Font ###
+# Font
 font pango: JetBrainsMono Nerd Font 10
+
+# Gaps
+gaps inner 10
+gaps outer 15
+
+# No title
+for_window [class="^.*"] border pixel 1
+
+# Autotiling
+exec_always --no-startup-id autotiling
+
+# Compositor
+exec_always --no-startup-id picom
+
+# Background
+exec --no-startup-id feh --bg-fill ~/Pictures/arch.png
 
 # Start XDG autostart .desktop files using dex.
 exec --no-startup-id dex --autostart --environment i3
@@ -13,66 +29,97 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 
-### Keybinds ###
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+### Launchers ###
 
-# start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# application launcher (a program launcher)
+# Application launcher
 bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'
 # bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 
-# power menu
+# Power menu
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 
-# change focus
+
+
+### Keybinds ###
+
+# Start terminal
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# Kill window
+bindsym $mod+Shift+q kill
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
+
+# Lock 
+bindsym $mod+l exec --no-startup-id i3lock-fancy
+
+# Lock and suspend
+bindsym $mod+Shift+l exec --no-startup-id systemctl suspend
+
+# Fullscreen window
+bindsym $mod+f fullscreen toggle
+
+# Drag floating windows
+floating_modifier $mod
+
+# Change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
+# Move window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# Split horizontally / vertically
 bindsym $mod+h split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
+# Change layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus: tiling / floating
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# Focus parent window
 bindsym $mod+a focus parent
 
-# focus the child container
+# Focus child container
 #bindsym $mod+d focus child
 
-# jump to urgent window
+# Jump to urgent window
 bindsym $mod+x [urgent=latest] focus
 
-# workspace variables
+# Change keyboard layout
+bindsym Mod1+Shift+e exec --no-startup-id setxkbmap -layout us
+bindsym Mod1+Shift+l exec --no-startup-id setxkbmap -layout lt
+
+# Screenshot
+bindsym Print exec --no-startup-id flameshot gui
+
+# Color picker
+bindsym Ctrl+Mod1+p exec --no-startup-id gpick -p
+
+
+### Workspaces ###
+
+# Workspace variables
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -84,7 +131,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -96,7 +143,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# switch to workspace with numpad
+# Switch to workspace with numpad
 bindsym $mod+mod2+KP_1 workspace $ws1
 bindsym $mod+mod2+KP_2 workspace $ws2
 bindsym $mod+mod2+KP_3 workspace $ws3
@@ -108,7 +155,7 @@ bindsym $mod+mod2+KP_8 workspace $ws8
 bindsym $mod+mod2+KP_9 workspace $ws9
 bindsym $mod+mod2+KP_0 workspace $ws10
 
-# move focused container to workspace
+# Move window to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -120,49 +167,29 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
-# restart i3 
-bindsym $mod+Shift+r restart
-
-# lock 
-bindsym $mod+l exec --no-startup-id i3lock-fancy
-
-# lock and suspend
-bindsym $mod+Shift+l exec --no-startup-id systemctl suspend
-
-# exit i3
-bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
-
-# Change keyboard layout
-bindsym Mod1+Shift+e exec --no-startup-id setxkbmap -layout us
-bindsym Mod1+Shift+l exec --no-startup-id setxkbmap -layout lt
-
-# resize window 
+# Resize window 
 mode "resize" {
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
+
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
-# polkit agent
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# dracula theme
+
+### Theme (dracula) ###
+
+# WM theme
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -171,7 +198,7 @@ client.urgent           #44475A #9580ff #F8F8F2 #9580ff   #9580ff
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
-# bar
+# i3bar theme
 bar {
   status_command i3status
   colors {
@@ -187,21 +214,8 @@ bar {
   }
 }
 
-# gaps
-gaps inner 10
-gaps outer 15
-
-# no title
-for_window [class="^.*"] border pixel 1
-
-# auto tiling
-exec_always --no-startup-id autotiling
-
-# compositor
-exec_always --no-startup-id picom
-
-# background
-exec --no-startup-id feh --bg-fill ~/Pictures/arch.png
+# Polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # app keybinds
 bindsym Ctrl+Mod1+w exec --no-startup-id firefox
@@ -209,7 +223,6 @@ bindsym Ctrl+Mod1+f exec --no-startup-id thunar
 bindsym Ctrl+Mod1+e exec --no-startup-id code
 bindsym Ctrl+Mod1+g exec --no-startup-id gitkraken
 
-bindsym Print exec --no-startup-id flameshot gui
 
 
 # assigning workspaces
