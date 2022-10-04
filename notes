@@ -1,0 +1,36 @@
+# Uncomment
+> sudo nano /etc/pacman.conf
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+
+
+# Install display server, amd, audio drivers
+> sudo pacman -S xorg mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver alsa-utils pulseaudio pulseaudio-alsa
+
+
+# Install yay packages
+> yay -S systemd-numlockontty autotiling visual-studio-code-bin icu69 gitkraken spotify
+
+
+# Install pacman packages
+> sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord tldr flameshot gpick tree ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
+
+
+# Link i3 config
+> ln -s ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
+
+
+# Link wallpaper
+> ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/wallpaper.png
+
+
+# Enable numlock on tty
+> sudo systemctl enable numLockOnTty.service
+
+
+# Enable display manager
+> sudo systemctl enable lightdm.service
+
+
+# Create common User's directories
+> xdg-user-dirs-update
