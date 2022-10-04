@@ -22,11 +22,14 @@ exec_always --no-startup-id picom
 # Background
 exec --no-startup-id feh --bg-fill ~/Pictures/arch.png
 
-# Start XDG autostart .desktop files using dex.
-exec --no-startup-id dex --autostart --environment i3
+# Polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Lock before suspention
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
+
+# startup script
+exec_always --no-startup-id ~/.startup
 
 
 
@@ -116,6 +119,11 @@ bindsym Print exec --no-startup-id flameshot gui
 # Color picker
 bindsym Ctrl+Mod1+p exec --no-startup-id gpick -p
 
+# App keybinds
+bindsym Ctrl+Mod1+w exec --no-startup-id firefox
+bindsym Ctrl+Mod1+f exec --no-startup-id thunar
+bindsym Ctrl+Mod1+e exec --no-startup-id code
+bindsym Ctrl+Mod1+g exec --no-startup-id gitkraken
 
 ### Workspaces ###
 
@@ -185,6 +193,35 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Assigning windows to workspaces
+
+# (1) terminals
+assign [class="Alacritty"] $ws1
+
+# (2) discord
+assign [class="discord"] $ws2
+
+# (3) main
+assign [class="Code"] $ws3
+
+# (4) firefox
+for_window [class="firefox"] move container to workspace $ws4
+
+# (5) thunar
+assign [class="Thunar"] $ws5
+
+# (6) git
+assign [class="GitKraken"] $ws6
+
+# (7) utilities
+
+# (8) non
+
+# (9) non
+
+# (10) spotify
+for_window [class="Spotify"] move container to workspace $ws10
+
 
 
 ### Theme (dracula) ###
@@ -213,45 +250,3 @@ bar {
     binding_mode       #9580ff #9580ff #F8F8F2
   }
 }
-
-# Polkit agent
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-# app keybinds
-bindsym Ctrl+Mod1+w exec --no-startup-id firefox
-bindsym Ctrl+Mod1+f exec --no-startup-id thunar
-bindsym Ctrl+Mod1+e exec --no-startup-id code
-bindsym Ctrl+Mod1+g exec --no-startup-id gitkraken
-
-
-
-# assigning workspaces
-
-# (1) terminals
-assign [class="Alacritty"] $ws1
-
-# (2) discord
-assign [class="discord"] $ws2
-
-# (3) main
-assign [class="Code"] $ws3
-
-# (4) firefox
-for_window [class="firefox"] move container to workspace $ws4
-
-# (5) thunar
-assign [class="Thunar"] $ws5
-
-# (6) git
-assign [class="GitKraken"] $ws6
-
-# (7) utilities
-
-# (8) free
-# (9) free
-
-# (10) spotify
-for_window [class="Spotify"] move container to workspace $ws10
-
-# startup script
-exec_always --no-startup-id ~/.startup
