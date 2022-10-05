@@ -14,7 +14,7 @@
 > sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord gparted deepin-calculator pavucontrol btop tldr tree unzip flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
 
 # Install yay packages
-> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift betterdiscord-installer spicetify-cli onlyoffice-bin
+> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift betterdiscord-installer grub-customizer spicetify-cli onlyoffice-bin
 
 
 
@@ -81,3 +81,9 @@
 > sudo chmod a+wr /opt/spotify
 > sudo chmod a+wr /opt/spotify/Apps -R
 > curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+Theme: Sleek
+Colour theme: Dracula
+
+# Grub
+> grub-customizer
+Use theme from ~/Source/git/dotfiles/archcraft.tar.gz
