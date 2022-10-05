@@ -45,7 +45,7 @@
 
 # Link display manager background
 > sudo mkdir -p /usr/share/backgrounds
-> sudo ln -s ~/Source/git/dotfiles/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
+> sudo cp ~/Source/git/dotfiles/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
 
 # Link compositor
 > sudo ln -sf ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
