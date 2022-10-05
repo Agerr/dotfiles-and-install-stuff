@@ -43,6 +43,10 @@
 > mkdir ~/.config/i3status
 > ln -sf ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
 
+# Link Xresources
+> ln -sf ~/Source/git/dotfiles/.Xresources ~/.Xresources
+> xrdb ~/.Xresources
+
 # Link desktop background
 > ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
 
