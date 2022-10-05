@@ -34,34 +34,34 @@
 
 
 
-### Linking ###
+### Linking / Copying ###
 
-# Link i3
+# Link i3 config
 > ln -sf ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
 
-# Link i3bar
+# Link i3bar config
 > mkdir ~/.config/i3status
 > ln -sf ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
 
-# Link Xresources
+# Link Xresources config 
 > ln -sf ~/Source/git/dotfiles/.Xresources ~/.Xresources
 > xrdb ~/.Xresources
 
-# Link desktop background
+# Link desktop background 
 > ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
 
-# Link display manager background
+# Copy display manager background
 > sudo mkdir -p /usr/share/backgrounds
 > sudo cp ~/Source/git/dotfiles/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
 
-# Link compositor
-> sudo ln -sf ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
+# Copy compositor config
+> sudo cp ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
 
-# Link display manager
-> sudo ln -sf ~/Source/git/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
+# Copy display manager config
+> sudo cp ~/Source/git/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
 
-# Link greeter
-> sudo ln -sf ~/Source/git/dotfiles/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+# Copy greeter config
+> sudo cp ~/Source/git/dotfiles/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
 # Link alacritty
 > ln -sf ~/Source/git/dotfiles/.config/alacritty ~/.config/alacritty
@@ -73,14 +73,14 @@
 > mkdir -p ~/.config/BetterDiscord/themes
 > ln -sf ~/Source/git/dotfiles/.config/BetterDiscord/themes/dracula.theme.css ~/.config/BetterDiscord/themes/dracula.theme.css
 
-# Link GTK theme
-> sudo ln -sf ~/Source/git/dotfiles/Dracula-GTK /usr/share/themes/Dracula
+# Copy GTK theme
+> sudo cp -r ~/Source/git/dotfiles/Dracula-GTK /usr/share/themes/Dracula
 
-# Link icon theme
-> sudo ln -sf ~/Source/git/dotfiles/Dracula-icons /usr/share/icons/
+# Copy icon theme
+> sudo cp -r ~/Source/git/dotfiles/Dracula-icons /usr/share/icons/
 
 # Link qt5 theme
-> ln -sf ~/Source/git/dotfiles/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/
+> cp ~/Source/git/dotfiles/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/
 
 # Link startup script
 > ln -sf ~/Source/git/dotfiles/.startup.sh ~/.startup.sh
