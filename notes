@@ -29,17 +29,29 @@
 
 
 # Link i3 config
-> ln -s ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
+> ln -sf ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
 
 
 # Link i3bar
 > mkdir ~/.config/i3status
-> ln -s ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
+> ln -sf ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
 
 
-# Link wallpaper
-> ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/wallpaper.png
+# Link desktop background
+> ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
+
+
+# Link display manager background
+> sudo mkdir -p /usr/share/backgrounds
+> sudo ln -s ~/Source/git/dotfiles/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
 
 
 # Link compositor
-> sudo ln -s ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
+> sudo ln -sf ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
+
+
+# Link display manager
+> sudo ln -sf ~/Source/git/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
+
+# Link greeter
+> sudo ln -sf ~/Source/git/dotfiles/slick-greeter.conf /etc/lightdm/slick-greeter.conf

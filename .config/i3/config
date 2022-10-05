@@ -20,7 +20,7 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 
 # Background
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-fill ~/Pictures/background.png
 
 # Polkit agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
