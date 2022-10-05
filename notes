@@ -14,7 +14,7 @@
 > sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord gparted btop tldr tree flameshot gpick ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
 
 # Install yay packages
-> yay -S systemd-numlockontty numlockx autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift
+> yay -S systemd-numlockontty numlockx autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift betterdiscord-installer
 
 
 
@@ -58,3 +58,14 @@
 
 # Link alacritty
 > ln -sf ~/Source/git/dotfiles/.config/alacritty ~/.config/alacritty
+
+# Link BetterDiscord theme
+> mkdir -p ~/.config/BetterDiscord/themes
+> ln -sf ~/Source/git/dotfiles/.config/BetterDiscord/themes/dracula.theme.css ~/.config/BetterDiscord/themes/dracula.theme.css
+
+
+
+### Manual installation ###
+
+# BetterDiscord
+> betterdiscord-installer
