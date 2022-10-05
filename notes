@@ -80,6 +80,7 @@
 > sudo cp -r ~/Source/git/dotfiles/Dracula-icons /usr/share/icons/
 
 # Link qt5 theme
+> mkdir -p ~/.config/qt5ct/colors/
 > cp ~/Source/git/dotfiles/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/
 
 # Link startup script
@@ -101,6 +102,7 @@ Color scheme: Dracula
 Icon theme: Dracula
 
 # BetterDiscord
+Log in to discord first
 > betterdiscord-installer
 
 # Sounds
@@ -109,6 +111,7 @@ Icon theme: Dracula
 # Spicetify
 > sudo chmod a+wr /opt/spotify
 > sudo chmod a+wr /opt/spotify/Apps -R
+> spicetify backup apply
 > curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 Theme: Sleek
 Colour theme: Dracula
