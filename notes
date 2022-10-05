@@ -75,6 +75,9 @@
 # Link icon theme
 > sudo ln -sf ~/Source/git/dotfiles/Dracula-icons /usr/share/icons/
 
+# Link qt5 theme
+> ln -sf ~/Source/git/dotfiles/Dracula-qt5/Dracula.conf ~/.config/qt5ct/colors/
+
 # Link startup script
 > ln -sf ~/Source/git/dotfiles/.startup.sh ~/.startup.sh
 
@@ -85,9 +88,13 @@
 # GTK, icon theme
 > lxappearance
 Theme: Dracula
+Icon theme: Dracula
 
 # QT theme
 > qt5ct
+Style: Windows
+Color scheme: Dracula
+Icon theme: Dracula
 
 # BetterDiscord
 > betterdiscord-installer
