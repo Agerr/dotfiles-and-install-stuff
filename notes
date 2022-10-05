@@ -11,10 +11,10 @@
 > sudo pacman -S xorg mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver alsa-utils pulseaudio pulseaudio-alsa
 
 # Install pacman packages
-> sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord gparted deepin-calculator pavucontrol btop tldr tree flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
+> sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord gparted deepin-calculator pavucontrol btop tldr tree unzip flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
 
 # Install yay packages
-> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift betterdiscord-installer onlyoffice-bin
+> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono visual-studio-code-bin icu69 gitkraken spotify timeshift betterdiscord-installer spicetify-cli onlyoffice-bin
 
 
 
@@ -69,10 +69,15 @@
 # Link startup script
 > ln -sf ~/Source/git/dotfiles/.startup.sh ~/.startup.sh
 
-### Manual installation ###
+### Manual configuration ###
 
 # BetterDiscord
 > betterdiscord-installer
 
 # Sounds
 > pavucontrol
+
+# Spicetify
+> sudo chmod a+wr /opt/spotify
+> sudo chmod a+wr /opt/spotify/Apps -R
+> curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
