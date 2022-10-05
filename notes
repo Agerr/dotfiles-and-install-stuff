@@ -69,6 +69,9 @@
 # Link GTK theme
 > sudo ln -sf ~/Source/git/dotfiles/Dracula-GTK /usr/share/themes/Dracula
 
+# Link icon theme
+> sudo ln -sf ~/Source/git/dotfiles/Dracula-icons /usr/share/icons/
+
 # Link startup script
 > ln -sf ~/Source/git/dotfiles/.startup.sh ~/.startup.sh
 
@@ -76,7 +79,7 @@
 
 ### Manual configuration ###
 
-# GTK theme
+# GTK, icon theme
 > lxappearance
 Theme: Dracula
 
