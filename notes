@@ -69,6 +69,8 @@
 # Link startup script
 > ln -sf ~/Source/git/dotfiles/.startup.sh ~/.startup.sh
 
+
+
 ### Manual configuration ###
 
 # BetterDiscord
