@@ -9,19 +9,11 @@
 
 
 # Install yay packages
-> yay -S systemd-numlockontty autotiling visual-studio-code-bin icu69 gitkraken spotify
+> yay -S systemd-numlockontty autotiling visual-studio-code-bin icu69 gitkraken spotify timeshift
 
 
 # Install pacman packages
-> sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord tldr flameshot gpick tree ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
-
-
-# Link i3 config
-> ln -s ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
-
-
-# Link wallpaper
-> ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/wallpaper.png
+> sudo pacman -S lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh picom firefox thunar discord gparted btop tldr tree flameshot gpick ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
 
 
 # Enable numlock on tty
@@ -34,3 +26,20 @@
 
 # Create common User's directories
 > xdg-user-dirs-update
+
+
+# Link i3 config
+> ln -s ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
+
+
+# Link i3bar
+> mkdir ~/.config/i3status
+> ln -s ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
+
+
+# Link wallpaper
+> ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/wallpaper.png
+
+
+# Link compositor
+> sudo ln -s ~/Source/git/dotfiles/picom.conf /etc/xdg/picom.conf
