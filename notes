@@ -76,7 +76,9 @@
 
 ### Manual configuration ###
 
-# GTK
+# GTK theme
+> lxappearance
+Theme: Dracula
 
 # BetterDiscord
 > betterdiscord-installer
