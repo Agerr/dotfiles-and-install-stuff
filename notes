@@ -9,7 +9,7 @@
 
 
 # Install yay packages
-> yay -S systemd-numlockontty autotiling visual-studio-code-bin icu69 gitkraken spotify timeshift
+> yay -S systemd-numlockontty numlockx autotiling visual-studio-code-bin icu69 gitkraken spotify timeshift
 
 
 # Install pacman packages
