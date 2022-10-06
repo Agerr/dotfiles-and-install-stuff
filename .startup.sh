@@ -10,6 +10,7 @@ commands=(
   'alacritty'
   'discord'
   'spotify'
+  'i3-msg workspace number "1"'
   'pkill .startup'
 )
 
