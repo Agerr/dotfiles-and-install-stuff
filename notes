@@ -20,6 +20,7 @@
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
+
 ### Enabling / changing stuff ###
 
 # Enable numlock on tty
@@ -33,7 +34,6 @@
 
 # Edit /etc/environment
 > echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee --append /etc/environment
-
 
 
 
@@ -66,10 +66,15 @@
 # Copy greeter config
 > sudo cp ~/Source/git/dotfiles/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 
-# Link alacritty
+# Link alacritty config
 > ln -sf ~/Source/git/dotfiles/.config/alacritty ~/.config/alacritty
 
-# Link dunst
+# Link zsh config
+> ln -sf ~/Source/git/dotfiles/.zshrc ~/.zshrc
+> cp ~/Source/git/dotfiles/Dracula-zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/
+> cp -r ~/Source/git/dotfiles/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
+
+# Link dunst config
 > ln -sf ~/Source/git/dotfiles/.config/dunst ~/.config/dunst
 
 # Link BetterDiscord theme
