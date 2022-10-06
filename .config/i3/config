@@ -117,7 +117,7 @@ bindsym Mod1+Shift+l exec --no-startup-id setxkbmap -layout lt
 bindsym Print exec --no-startup-id flameshot gui
 
 # Color picker
-bindsym Ctrl+Mod1+p exec --no-startup-id gpick -p
+bindsym Ctrl+Mod1+p exec --no-startup-id pkill gpick && gpick -p
 
 # App keybinds
 bindsym Ctrl+Mod1+w exec --no-startup-id firefox
