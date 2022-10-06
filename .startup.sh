@@ -5,12 +5,12 @@ pkill spotify
 pkill Discord
 
 commands=(
+  'i3-msg workspace number "1"'
   'alacritty -e btop'
   'alacritty -e cava'
   'alacritty'
   'discord'
   'spotify'
-  'i3-msg workspace number "1"'
   'pkill .startup'
 )
 
