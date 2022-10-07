@@ -11,10 +11,10 @@
 > sudo pacman -S xorg mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver alsa-utils pulseaudio pulseaudio-alsa
 
 # Install pacman packages
-> sudo pacman -S zsh zsh-completions lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh mplayer picom firefox thunar gparted deepin-calculator pavucontrol lxappearance qt5ct neofetch btop tldr tree unzip wget flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid otf-latin-modern otf-latinmodern-math noto-fonts-emoji gvfs ntfs-3g
+> sudo pacman -S zsh zsh-completions lightdm lightdm-slick-greeter i3 alacritty xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh mplayer picom firefox thunar gparted deepin-calculator pavucontrol lxappearance qt5ct neofetch btop tldr tree unzip wget flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts-emoji gvfs ntfs-3g
 
 # Install yay packages
-> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono ttf-ms-win10-auto ttf-cm-unicode visual-studio-code-bin icu69 gitkraken spotify timeshift discord betterdiscord-installer grub-customizer spicetify-cli onlyoffice-bin
+> yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono ttf-ms-win11 visual-studio-code-bin icu69 gitkraken spotify timeshift discord betterdiscord-installer grub-customizer spicetify-cli onlyoffice-bin
 
 # Intall zsh
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
