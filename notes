@@ -135,6 +135,8 @@ Use theme from ~/Source/git/dotfiles/archcraft.tar.gz
 
 # Edit rofi launcher's types in ~/.config/rofi/launchers/type-X/launcher.sh
 > nano ~/.config/rofi/launchers/type-X/launcher.sh
+(Type 2 style 12)
 
 # Edit rofi launcher's color themes in ~/.config/rofi/launchers/type-X/shared/colors.rasi
 > nano ~/.config/rofi/launchers/type-X/shared/colors.rasi
+(Dracula)

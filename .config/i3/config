@@ -36,8 +36,8 @@ exec_always --no-startup-id sh ~/.startup.sh
 ### Launchers ###
 
 # Application launcher
-bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'
-# bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+# bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 
 # Power menu
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
