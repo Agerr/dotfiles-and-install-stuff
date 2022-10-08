@@ -103,7 +103,7 @@ bindsym $mod+space focus mode_toggle
 # Focus parent window
 bindsym $mod+a focus parent
 
-# Focus child container
+# Focus child window
 #bindsym $mod+d focus child
 
 # Jump to urgent window
@@ -117,7 +117,10 @@ bindsym Mod1+Shift+l exec --no-startup-id setxkbmap -layout lt
 bindsym Print exec --no-startup-id flameshot gui
 
 # Color picker
-bindsym Ctrl+Mod1+p exec --no-startup-id pkill gpick && gpick -p
+bindsym Ctrl+Mod1+p exec --no-startup-id gpick -p && pkill gpick && gpick -p
+
+# Remove window transparency
+bindsym $mod+Shift+T exec --no-startup-id picom-trans -c 100 &
 
 # App keybinds
 bindsym Ctrl+Mod1+w exec --no-startup-id firefox
