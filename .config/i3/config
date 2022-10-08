@@ -26,7 +26,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/background.png
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Lock before suspention
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy -n; amixer set Master unmute
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy
 
 # startup script
 exec_always --no-startup-id sh ~/.startup.sh
@@ -65,7 +65,7 @@ bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 bindsym $mod+l exec --no-startup-id i3lock-fancy
 
 # Lock and suspend
-bindsym $mod+Shift+l exec --no-startup-id amixer set Master mute && systemctl suspend
+bindsym $mod+Shift+l exec --no-startup-id systemctl suspend
 
 # Fullscreen window
 bindsym $mod+f fullscreen toggle
@@ -124,6 +124,8 @@ bindsym Ctrl+Mod1+w exec --no-startup-id firefox
 bindsym Ctrl+Mod1+f exec --no-startup-id thunar
 bindsym Ctrl+Mod1+e exec --no-startup-id code
 bindsym Ctrl+Mod1+g exec --no-startup-id gitkraken
+
+
 
 ### Workspaces ###
 

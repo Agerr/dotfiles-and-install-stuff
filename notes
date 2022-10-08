@@ -144,7 +144,8 @@ Use theme from ~/Source/git/dotfiles/archcraft.tar.gz
 # Edit rofi powermenu's types in ~/.config/rofi/powermenu/type-X/powermenu.sh
 > nano ~/.config/rofi/powermenu/type-X/powermenu.sh
 (Type 3 style 3)
-(Change i3lock to i3lock-fancy + add "sleep 0.2" before it + replace "mpc -q pause" with "sleep 0.2")
+(Change i3lock to i3lock-fancy + add "sleep 0.2" before it) 
+(Delete "mpc -q pause" + replace "amixer set Master mute" with "sleep 0.2")
 
 # Edit rofi powermenu's color themes in ~/.config/rofi/powermenu/type-X/shared/colors.rasi
 > nano ~/.config/rofi/powermenu/type-X/shared/colors.rasi
