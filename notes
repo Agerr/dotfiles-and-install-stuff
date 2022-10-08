@@ -11,7 +11,7 @@
 > sudo pacman -S xorg mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver alsa-utils pulseaudio pulseaudio-alsa
 
 # Install pacman packages
-> sudo pacman -S zsh zsh-completions lightdm lightdm-slick-greeter i3 alacritty rofi xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh mplayer picom firefox thunar gparted deepin-calculator pavucontrol lxappearance qt5ct neofetch btop tldr tree unzip wget flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts noto-fonts-emoji gvfs ntfs-3g
+> sudo pacman -S zsh zsh-completions lightdm lightdm-slick-greeter i3 alacritty dmenu rofi xdg-user-dirs xss-lock polkit-gnome gnome-keyring feh mplayer picom firefox thunar gparted deepin-calculator pavucontrol lxappearance qt5ct neofetch btop tldr tree unzip wget flameshot gpick dunst ttf-jetbrains-mono ttf-dejavu ttf-droid noto-fonts noto-fonts-emoji gvfs ntfs-3g
 
 # Install yay packages
 > yay -S systemd-numlockontty numlockx i3lock-fancy-git cava autotiling nerd-fonts-jetbrains-mono ttf-ms-win11 visual-studio-code-bin icu69 gitkraken spotify timeshift discord betterdiscord-installer grub-customizer spicetify-cli onlyoffice-bin
@@ -19,6 +19,10 @@
 # Intall zsh
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install adi1090x/rofi
+> cd ~/Source/git/ && git clone --depth=1 https://github.com/adi1090x/rofi.git
+> cd rofi && chmod +x setup.sh
+> ./setup.sh
 
 
 ### Enabling / changing stuff ###
@@ -107,6 +111,7 @@ Icon theme: Dracula
 > qt5ct
 Style: Windows
 Color scheme: Dracula
+Font: Noto Sans 12
 Icon theme: Dracula
 
 # BetterDiscord
@@ -127,3 +132,9 @@ Colour theme: Dracula
 # Grub
 > grub-customizer
 Use theme from ~/Source/git/dotfiles/archcraft.tar.gz
+
+# Edit rofi launcher's types in ~/.config/rofi/launchers/type-X/launcher.sh
+> nano ~/.config/rofi/launchers/type-X/launcher.sh
+
+# Edit rofi launcher's color themes in ~/.config/rofi/launchers/type-X/shared/colors.rasi
+> nano ~/.config/rofi/launchers/type-X/shared/colors.rasi
