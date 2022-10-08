@@ -1,8 +1,8 @@
 #!/bin/shell
 
-pkill alacritty
-pkill spotify
-pkill Discord
+killall alacritty
+killall spotify
+killall Discord
 
 commands=(
   'i3-msg workspace number "1"'
