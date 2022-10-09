@@ -20,6 +20,7 @@
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install adi1090x/rofi
+> mkdir -p ~/Source/git/
 > cd ~/Source/git/ && git clone --depth=1 https://github.com/adi1090x/rofi.git
 > cd rofi && chmod +x setup.sh
 > ./setup.sh
