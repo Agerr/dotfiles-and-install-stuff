@@ -17,7 +17,7 @@ commands=(
 pids=""
 
 for command in "${commands[@]}"; do
-  sleep 0.3
+  sleep 0.5
   echo command is ${command}
   ( ${command} ) &
   pid=$!
