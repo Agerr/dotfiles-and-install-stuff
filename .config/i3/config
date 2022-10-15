@@ -229,6 +229,14 @@ for_window [class="Spotify"] move container to workspace $ws10
 
 
 
+# Testing windows
+for_window [title="_test_"] floating enable
+for_window [title="_test_"] move position center
+for_window [title="_test_"] border normal
+
+
+
+
 ### Theme (dracula) ###
 
 # WM theme
