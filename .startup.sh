@@ -9,7 +9,7 @@ commands=(
   'alacritty -e btop'
   'alacritty -e cava'
   'alacritty'
-  'discord'
+  'discord-ptb'
   'spotify'
   'pkill .startup'
 )
