@@ -61,6 +61,9 @@
 # Link desktop background 
 > ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
 
+# Copy amdgpu config
+> sudo cp ~/Source/git/dotfiles/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
+
 # Copy display manager background
 > sudo mkdir -p /usr/share/backgrounds
 > sudo cp ~/Source/git/dotfiles/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
