@@ -238,6 +238,7 @@ for_window [title="_test_"] border normal
 
 # Floating windows
 for_window [class="feh"] floating enable
+for_window [class="dde-calendar"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Gpick"] floating enable
 
