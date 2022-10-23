@@ -12,11 +12,11 @@ sudo systemctl enable lightdm.service
 sudo systemctl enable cronie.service
 xdg-user-dirs-update
 echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee --append /etc/environment
+mkdir -p ~/.config/i3
 ln -sf ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
 mkdir ~/.config/i3status
 ln -sf ~/Source/git/dotfiles/.config/i3status/config ~/.config/i3status/config
 ln -sf ~/Source/git/dotfiles/.Xresources ~/.Xresources
-xrdb ~/.Xresources
 ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
 sudo cp ~/Source/git/dotfiles/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
 sudo mkdir -p /usr/share/backgrounds

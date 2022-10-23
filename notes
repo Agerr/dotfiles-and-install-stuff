@@ -48,6 +48,7 @@
 ### Linking / Copying ###
 
 # Link i3 config
+> mkdir -p ~/.config/i3
 > ln -sf ~/Source/git/dotfiles/.config/i3/config ~/.config/i3/config
 
 # Link i3bar config
@@ -56,7 +57,6 @@
 
 # Link Xresources config 
 > ln -sf ~/Source/git/dotfiles/.Xresources ~/.Xresources
-> xrdb ~/.Xresources
 
 # Link desktop background 
 > ln -s ~/Source/git/dotfiles/Wallpapers/dracula_arch.png ~/Pictures/background.png
@@ -127,6 +127,9 @@ Log in to discord first
 
 # Sounds
 > pavucontrol
+
+# Xresources
+> xrdb ~/.Xresources
 
 # Spicetify
 > sudo chmod a+wr /opt/spotify
