@@ -182,10 +182,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Resize window 
 mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 30 px or 30 ppt
+        bindsym Down resize grow height 30 px or 30 ppt
+        bindsym Up resize shrink height 30 px or 30 ppt
+        bindsym Right resize grow width 30 px or 30 ppt
 
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
