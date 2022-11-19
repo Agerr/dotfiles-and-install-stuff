@@ -29,7 +29,7 @@ cp ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/dracula.zsh-theme ~/.oh-m
 cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-zsh/lib/ ~/.oh-my-zsh/themes/
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/dunst ~/.config/dunst
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/cava ~/.config/cava
-mkdir -p ~/.config/rord/themes
+mkdir -p ~/.config/BetterDiscord/themes
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/BetterDiscord/themes/dracula.theme.css ~/.config/BetterDiscord/themes/dracula.theme.css
 sudo cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-GTK /usr/share/themes/Dracula
 sudo cp -r ~/Source/git/dotfiles-and-install-stuff/Dracula-icons /usr/share/icons/
