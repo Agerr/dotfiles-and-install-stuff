@@ -18,7 +18,6 @@ mkdir ~/.config/i3status
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.config/i3status/config ~/.config/i3status/config
 ln -sf ~/Source/git/dotfiles-and-install-stuff/.Xresources ~/.Xresources
 ln -s ~/Source/git/dotfiles-and-install-stuff/Wallpapers/dracula_arch.png ~/Pictures/background.png
-sudo cp ~/Source/git/dotfiles-and-install-stuff/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
 sudo mkdir -p /usr/share/backgrounds
 sudo cp ~/Source/git/dotfiles-and-install-stuff/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
 sudo cp ~/Source/git/dotfiles-and-install-stuff/picom.conf /etc/xdg/picom.conf
