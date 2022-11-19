@@ -62,9 +62,6 @@
 # Link desktop background 
 > ln -s ~/Source/git/dotfiles-and-install-stuff/Wallpapers/dracula_arch.png ~/Pictures/background.png
 
-# Copy amdgpu config
-> sudo cp ~/Source/git/dotfiles-and-install-stuff/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
-
 # Copy display manager background
 > sudo mkdir -p /usr/share/backgrounds
 > sudo cp ~/Source/git/dotfiles-and-install-stuff/Wallpapers/dracula_base.png /usr/share/backgrounds/background.png
@@ -164,3 +161,6 @@ Use theme from ~/Source/git/dotfiles-and-install-stuff/archcraft.tar.gz
 # Edit rofi powermenu's color themes in ~/.config/rofi/powermenu/type-X/shared/colors.rasi
 > nano ~/.config/rofi/powermenu/type-X/shared/colors.rasi
 (Dracula)
+
+# If you have amdgpu: copy amdgpu config
+> sudo cp ~/Source/git/dotfiles-and-install-stuff/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
