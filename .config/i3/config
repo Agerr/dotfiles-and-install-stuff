@@ -210,6 +210,7 @@ assign [class="discord"] $ws2
 assign [class="Code"] $ws3
 
 # (4) firefox
+assign [class="firefox"] $ws4
 for_window [class="firefox"] move container to workspace $ws4
 
 # (5) thunar
